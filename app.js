@@ -11,6 +11,8 @@ const spongebobImg = document.getElementById('spongebob-img');
 
 /* Events */
 patrickButton.addEventListener('click', () => {
+    resetImg();
+
     const randomLocation = Math.ceil(Math.random() * 3);
     if (randomLocation === 1) {
         //add to wins
@@ -23,6 +25,8 @@ patrickButton.addEventListener('click', () => {
 });
 
 squidwardButton.addEventListener('click', () => {
+    resetImg();
+
     const randomLocation = Math.ceil(Math.random() * 3);
     console.log(randomLocation);
     if (randomLocation === 1) {
@@ -36,6 +40,8 @@ squidwardButton.addEventListener('click', () => {
 });
 
 spongebobButton.addEventListener('click', () => {
+    resetImg();
+
     const randomLocation = Math.ceil(Math.random() * 3);
     console.log(randomLocation);
     if (randomLocation === 1) {
@@ -49,5 +55,11 @@ spongebobButton.addEventListener('click', () => {
 });
 
 /* Display Functions */
+
+function resetImg() {
+    patrickImg.classList.remove('reveal');
+    squidwardImg.classList.remove('reveal');
+    spongebobImg.classList.remove('reveal');
+}
 
 // (don't forget to call any display functions you want to run on page load!)
