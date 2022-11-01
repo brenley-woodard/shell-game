@@ -56,3 +56,8 @@ button {
     display: inline-block;
     font-size: 16px;
 }
+
+#scoreboard {
+    margin-top: 35px;
+    background-color: #cb89d0;
+}

@@ -55,7 +55,6 @@ spongebobButton.addEventListener('click', () => {
 });
 
 /* Display Functions */
-
 function resetImg() {
     patrickImg.classList.remove('reveal');
     squidwardImg.classList.remove('reveal');
