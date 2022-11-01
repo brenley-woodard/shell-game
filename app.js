@@ -7,25 +7,34 @@ const patrickImg = document.getElementById('patrick-img');
 const squidwardImg = document.getElementById('squidward-img');
 const spongebobImg = document.getElementById('spongebob-img');
 
+const winsEl = document.getElementById('wins');
+const lossesEl = document.getElementById('losses');
+const totalEl = document.getElementById('total');
+
 /* State */
+let wins = 0;
+let total = 0;
 
 /* Events */
 patrickButton.addEventListener('click', () => {
     resetImg();
+    total++;
 
     const randomLocation = Math.ceil(Math.random() * 3);
     if (randomLocation === 1) {
-        //add to wins
         patrickImg.classList.add('reveal');
+        wins++;
     } else if (randomLocation === 2) {
         squidwardImg.classList.add('reveal');
     } else {
         spongebobImg.classList.add('reveal');
     }
+    handleScoreboard();
 });
 
 squidwardButton.addEventListener('click', () => {
     resetImg();
+    total++;
 
     const randomLocation = Math.ceil(Math.random() * 3);
     console.log(randomLocation);
@@ -33,14 +42,16 @@ squidwardButton.addEventListener('click', () => {
         patrickImg.classList.add('reveal');
     } else if (randomLocation === 2) {
         squidwardImg.classList.add('reveal');
-        //add wins
+        wins++;
     } else {
         spongebobImg.classList.add('reveal');
     }
+    handleScoreboard();
 });
 
 spongebobButton.addEventListener('click', () => {
     resetImg();
+    total++;
 
     const randomLocation = Math.ceil(Math.random() * 3);
     console.log(randomLocation);
@@ -50,8 +61,9 @@ spongebobButton.addEventListener('click', () => {
         squidwardImg.classList.add('reveal');
     } else {
         spongebobImg.classList.add('reveal');
-        //add wins
+        wins++;
     }
+    handleScoreboard();
 });
 
 /* Display Functions */
@@ -61,4 +73,8 @@ function resetImg() {
     spongebobImg.classList.remove('reveal');
 }
 
-// (don't forget to call any display functions you want to run on page load!)
+function handleScoreboard() {
+    winsEl.textContent = wins;
+    lossesEl.textContent = total - wins;
+    totalEl.textContent = total;
+}
