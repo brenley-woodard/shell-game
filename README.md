@@ -1,4 +1,4 @@
-![](./wireframe.png)
+![](./assets/wireframe.png)
 
 ### State
 
