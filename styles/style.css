@@ -40,7 +40,6 @@ img {
 .gary {
     z-index: 10;
     position: absolute;
-    content: 🐌;
     height: 40px;
     width: 40px;
     font-size: 70px;
