@@ -40,11 +40,10 @@ img {
 .gary {
     z-index: 10;
     position: absolute;
+    content: 🐌;
     height: 40px;
     width: 40px;
-    background-color: rgb(245, 233, 220);
-    border-radius: 50%;
-    box-shadow: 5px -2px 5px rgba(113, 112, 112, 0.6);
+    font-size: 70px;
     margin: 10px;
     top: 300px;
 }
